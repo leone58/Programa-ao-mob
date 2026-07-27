@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Semana 3 - Fundamentos da Programacao Mobile. Material de apoio para aulas sobre Kotlin, Swift, logica de programacao e boas praticas." />
+  <title>Semana 3 - Fundamentos da Programacao Mobile</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Barra de progresso de leitura -->
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <!-- Cabecalho -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-badge">S3</span>
+        <div>
+          <p class="brand-kicker">Semana 3</p>
+          <h1 class="brand-title">Fundamentos da Programacao Mobile</h1>
+        </div>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Navegacao das aulas">
+        <a href="#intro">Inicio</a>
+        <a href="#aula-1">Aula 1</a>
+        <a href="#aula-2">Aula 2</a>
+        <a href="#aula-3">Aula 3</a>
+        <a href="#aula-4">Aula 4</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Introducao -->
+    <section class="hero" id="intro">
+      <div class="container">
+        <p class="hero-kicker">Trilha de Desenvolvimento Mobile</p>
+        <h2 class="hero-title">Nesta semana voce vai conhecer as principais linguagens de programacao para apps</h2>
+        <p class="hero-text">
+          Kotlin, Swift, logica de programacao e boas praticas de codificacao. Ao final,
+          voce estara pronto para resolver seus primeiros exercicios de programacao basica.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#aula-1">Comecar pela Aula 1</a>
+          <a class="btn btn-ghost" href="#aula-4">Ir para os exercicios</a>
+        </div>
+
+        <ul class="lesson-index" aria-label="Lista de aulas">
+          <li><a href="#aula-1"><span class="idx">01</span> Linguagens para mobile (Kotlin, Swift)</a></li>
+          <li><a href="#aula-2"><span class="idx">02</span> Estruturas de controle e logica</a></li>
+          <li><a href="#aula-3"><span class="idx">03</span> Boas praticas de codificacao</a></li>
+          <li><a href="#aula-4"><span class="idx">04</span> Exercicios de programacao basica</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- AULA 1 -->
+    <section class="lesson" id="aula-1">
+      <div class="container">
+        <div class="lesson-head">
+          <span class="lesson-tag">Aula 1</span>
+          <h2>Linguagens de programacao para mobile</h2>
+          <p class="lesson-sub">Entenda o que sao Kotlin e Swift e para que serve cada uma.</p>
+        </div>
+
+        <div class="card">
+          <h3>O que e desenvolvimento mobile?</h3>
+          <p>
+            Desenvolvimento mobile e a criacao de aplicativos (apps) que rodam em celulares
+            e tablets. Existem dois grandes sistemas operacionais no mercado:
+          </p>
+          <div class="grid-2">
+            <div class="mini-card">
+              <h4>Android</h4>
+              <p>Sistema do Google. A linguagem oficial e o <strong>Kotlin</strong> (tambem usa Java).</p>
+            </div>
+            <div class="mini-card">
+              <h4>iOS</h4>
+              <p>Sistema da Apple (iPhone/iPad). A linguagem oficial e o <strong>Swift</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Kotlin (Android)</h3>
+          <p>Linguagem moderna, segura e concisa. Exemplo de "Ola, mundo":</p>
+          <pre><code>fun main() {
+    val nome = "turma"
+    println("Ola, $nome! Bem-vindos ao mobile.")
+}</code></pre>
+        </div>
+
+        <div class="card">
+          <h3>Swift (iOS)</h3>
+          <p>Linguagem da Apple, tambem moderna e segura. O mesmo exemplo:</p>
+          <pre><code>import Foundation
+
+let nome = "turma"
+print("Ola, \(nome)! Bem-vindos ao mobile.")</code></pre>
+        </div>
+
+        <div class="callout">
+          <strong>Resumo:</strong> Kotlin = Android, Swift = iOS. As duas sao parecidas na ideia:
+          declaramos variaveis, chamamos funcoes e mostramos texto na tela.
+        </div>
+      </div>
+    </section>
+
+    <!-- AULA 2 -->
+    <section class="lesson alt" id="aula-2">
+      <div class="container">
+        <div class="lesson-head">
+          <span class="lesson-tag">Aula 2</span>
+          <h2>Estruturas de controle e logica de programacao</h2>
+          <p class="lesson-sub">Como o programa "toma decisoes" e "repete tarefas".</p>
+        </div>
+
+        <div class="card">
+          <h3>Variaveis</h3>
+          <p>Sao "caixinhas" que guardam valores. Ex.: idade, nome, preco.</p>
+          <pre><code>val idade = 18        // Kotlin
+let idade = 18        // Swift</code></pre>
+        </div>
+
+        <div class="card">
+          <h3>Condicionais (if / else)</h3>
+          <p>Servem para o programa decidir o que fazer.</p>
+          <pre><code>if (idade >= 18) {
+    println("Maior de idade")
+} else {
+    println("Menor de idade")
+}</code></pre>
+        </div>
+
+        <div class="card">
+          <h3>Repeticoes (loops)</h3>
+          <p>Servem para repetir uma acao varias vezes sem reescrever codigo.</p>
+          <pre><code>for (i in 1..5) {
+    println("Contando: $i")
+}</code></pre>
+        </div>
+
+        <div class="callout">
+          <strong>Analogia:</strong> o <em>if</em> e como um cruzamento: "se o sinal estiver verde, siga".
+          O <em>loop</em> e como escovar os dentes: voce repete o movimento varias vezes.
+        </div>
+      </div>
+    </section>
+
+    <!-- AULA 3 -->
+    <section class="lesson" id="aula-3">
+      <div class="container">
+        <div class="lesson-head">
+          <span class="lesson-tag">Aula 3</span>
+          <h2>Boas praticas de codificacao</h2>
+          <p class="lesson-sub">Como escrever codigo que outras pessoas (e voce no futuro) conseguem entender.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="mini-card">
+            <h4>Nomes claros</h4>
+            <p>Prefira <code>quantidadeAlunos</code> em vez de <code>qa</code> ou <code>x</code>.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Comentarios uteis</h4>
+            <p>Explique o "porque", nao o obvio. Comentario bom ajuda, comentario demais atrapalha.</p>
+          </div>
+          <div class="mini-card">
+            <h4>Codigo organizado</h4>
+            <p>Use indentacao e divida o problema em partes pequenas (funcoes).</p>
+          </div>
+          <div class="mini-card">
+            <h4>Nao se repita (DRY)</h4>
+            <p>Se algo se repete, transforme em uma funcao reutilizavel.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Antes x Depois</h3>
+          <div class="grid-2">
+            <div>
+              <p class="tag-bad">Evite</p>
+              <pre><code>fun f(a:Int,b:Int):Int{return a+b}</code></pre>
+            </div>
+            <div>
+              <p class="tag-good">Prefira</p>
+              <pre><code>fun somar(numeroA: Int, numeroB: Int): Int {
+    return numeroA + numeroB
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AULA 4 -->
+    <section class="lesson alt" id="aula-4">
+      <div class="container">
+        <div class="lesson-head">
+          <span class="lesson-tag">Aula 4</span>
+          <h2>Exercicios de programacao basica</h2>
+          <p class="lesson-sub">Pratique o que aprendeu. Tente fazer antes de ver a resposta!</p>
+        </div>
+
+        <div class="exercise" data-exercise>
+          <p class="exercise-q"><strong>Exercicio 1:</strong> Crie uma variavel com seu nome e mostre "Ola, [seu nome]" na tela.</p>
+          <button class="btn btn-small toggle-answer">Ver resposta</button>
+          <div class="exercise-a" hidden>
+            <pre><code>val nome = "Maria"
+println("Ola, $nome")</code></pre>
+          </div>
+        </div>
+
+        <div class="exercise" data-exercise>
+          <p class="exercise-q"><strong>Exercicio 2:</strong> Verifique se um numero e maior que 10 e mostre uma mensagem.</p>
+          <button class="btn btn-small toggle-answer">Ver resposta</button>
+          <div class="exercise-a" hidden>
+            <pre><code>val numero = 15
+if (numero > 10) {
+    println("Maior que 10")
+} else {
+    println("Menor ou igual a 10")
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="exercise" data-exercise>
+          <p class="exercise-q"><strong>Exercicio 3:</strong> Mostre os numeros de 1 a 10 usando um loop.</p>
+          <button class="btn btn-small toggle-answer">Ver resposta</button>
+          <div class="exercise-a" hidden>
+            <pre><code>for (i in 1..10) {
+    println(i)
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="callout">
+          <strong>Dica para a turma:</strong> errar faz parte! O importante e testar, ler a mensagem de erro
+          e tentar de novo.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Semana 3 - Fundamentos da Programacao Mobile - Material de apoio para aulas.</p>
+      <p class="muted">Consulte o arquivo <code>README.md</code> para o roteiro de aula completo.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
